@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+{% block conteudo %}
+<section class="container-fluid mt-4">
+    {% for content in contents %}
+    <div class="d-flex w-100 justify-content-between align-items-center">
+        <h4>{{ content.nameFile }}</h4>
+        <div class="btn-group dropleft">
+            <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <i class="fas fa-chevron-circle-down"></i>
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Apagar</a>
+                <a class="dropdown-item" href="#">Renomear</a>
+                <a class="dropdown-item" href="#">Download</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+{% endblock %}
