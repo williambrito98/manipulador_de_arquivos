@@ -1,6 +1,8 @@
-import re
+import os
 
-
-email = 'Will<script/>@gmail.com'
-
-print(re.match(r'^[\w|\d]+@[\w]+.[\w]+(.[\w]+)', email))
+files = os.listdir('C:/')
+listFiles = []
+for file in files:
+    tupleFile = (file, file)
+    listFiles.append(tupleFile)
+print(listFiles[0][0])
